@@ -1,0 +1,140 @@
+.background{
+  background-image:linear-gradient(to bottom right, #70C5E9, #91A7E1,#A495D8,#B184D3);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  
+}
+.font{
+  font-size: 100px;
+  color: #ffffff; 
+  text-transform: uppercase;  
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+width: 250px;
+background-color: #fcfcfc;
+color: rgb(68, 68, 68);
+height: 500px;
+margin-top: 100px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+margin: auto;
+margin-bottom: 30px;
+
+}
+
+.cim
+{
+    text-shadow: 1px 1px 2px black;
+    color: #d8d8d8;
+    font-weight: 900;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 80px;
+
+}
+.row
+{
+  margin-top: 50px;
+}
+
+.card-img-top
+{ 
+  border-radius: 25px;
+  padding: 1rem;
+    
+}
+
+
+.location
+{
+  padding: 5px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;  
+  gap: 0.5rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  margin: 5px;
+  background-image:linear-gradient(to bottom right, #70C5E9, #91A7E1,#A495D8,#B184D3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.font-bold{
+  font-size: 20px;
+  display: none;
+  position: relative; 
+  top: 120%;
+  right: 0;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 10;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  height: 60px;
+  margin-right: 20px;
+}
+.btn:hover {
+  box-shadow: 2px 2px 4px #7959ee;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 240px;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+p
+{
+  font-size: 15px;
+}
+
+.star-icon {
+  display: inline-block;  
+  color: gold;
+  font-size: 1em;
+  margin-right: 2px;
+ 
+}
+.rating{
+  margin-bottom: auto;
+}
+.card-btns-n{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;
+  
+}

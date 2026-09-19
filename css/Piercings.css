@@ -1,0 +1,160 @@
+.background{
+  background-image:linear-gradient(to bottom right,#000000,#ffffff);;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  
+}
+.font{
+  font-size: 100px;
+  color: #ffffff;  
+  text-transform: uppercase;  
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+width: 250px;
+background-color: #bdbdbd;
+color: rgb(61, 61, 61);
+height: 500px;
+margin-top: 100px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+margin: auto;
+
+
+}
+.cim
+{  
+    text-shadow: 1px 1px 2px black;
+    color: #d8d8d8;
+    font-weight: 900;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 80px;
+
+}
+.row
+{
+  margin-top: 50px;
+}
+
+.card-img-top
+{
+  border-radius: 25px;
+  padding: 1rem;   
+
+}
+.location
+{
+  padding: 5px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;  
+  gap: 0.5rem;
+}
+
+.btn
+{
+  padding: 0.5rem 1rem;
+  margin: 5px;  
+  background-image:linear-gradient(to bottom right,#242424,#474747,#888888);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-weight: 600;
+}
+.card-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 4px #1a1a1a;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 240px;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+
+p
+{
+  font-size: 15px;
+}
+
+.star-icon {
+  display: inline-block;  
+  color: gold;
+  font-size: 1em;
+  margin-right: 2px;
+ 
+}
+.rating{
+  margin-bottom: auto;
+}
+.card-btns-p1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;  
+}
+.card-btns-p4{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;  
+}
+.card-btns-p1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;  
+}
+.card-btns-p4{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 82px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;  
+}
+.card-btns-p5{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  height: 60px;  
+  margin-right: 20px;  
+}
