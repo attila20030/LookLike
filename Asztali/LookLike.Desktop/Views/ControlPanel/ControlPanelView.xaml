@@ -1,0 +1,161 @@
+﻿<UserControl x:Class="LookLike.Desktop.Views.ControlPanel.ControlPanelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:viewModels="clr-namespace:LookLike.Desktop.ViewModels.ControlPanel"
+             d:DataContext="{d:DesignInstance Type=viewModels:ControlPanelViewModel, IsDesignTimeCreatable=True}"
+             xmlns:local="clr-namespace:LookLike.Desktop.Views.ControlPanel"
+             mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="1300" d:Background="#5c509c">
+    <Grid Margin="10"><!--a szolgáltató itt tudja kitölteni a profilján megjeleníthető adatokat-->
+    
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Profil" 
+                   FontSize="20" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,20" 
+                   Grid.Row="0"
+                   Foreground="white"
+                   />
+
+        <StackPanel Margin="0,10" 
+                    Grid.Row="1" 
+                    HorizontalAlignment="Center">
+            
+            <Border x:Name="ImageBorder"
+                Width="95" Height="97"
+                CornerRadius="20"
+                BorderBrush="#382d72"
+                BorderThickness="2"
+                Background="{Binding ImageBrush}" />
+
+            <!-- Gomb a képváltáshoz -->
+            <Button Content="Kép választása"
+                VerticalAlignment="Bottom"
+                Click="ChangeImage_Click"
+                Margin="10"
+                Background="#382d72"
+                Foreground="#e5ccf4"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" 
+                    Margin="0,10" 
+                    Grid.Row="2">
+            <TextBlock Margin="10" Text="Felhasználónév:" 
+                       Width="120" 
+                       VerticalAlignment="Center"
+                       Foreground="white"
+                       />
+            <TextBox
+                    Width="200" 
+                    HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" 
+                    Margin="0,10" 
+                    Grid.Row="3">
+            <TextBlock Margin="10"
+                       Text="E-mail cím:" 
+                       Width="120" 
+                       VerticalAlignment="Center"
+                       Foreground="white"
+                       />
+            <TextBox Width="200" 
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" 
+                    Margin="0,10" 
+                    Grid.Row="5">
+            <TextBlock Margin="10"
+                       Text="Szakterület:" 
+                       Width="120" 
+                       VerticalAlignment="Center"
+                       Foreground="white"
+                       />
+            <ComboBox HorizontalAlignment="Center" VerticalAlignment="Center" Width="200">
+                <ComboBoxItem Content="Admin" />
+                <ComboBoxItem Content="Rendszergazda" />
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" 
+                    Margin="0,10" 
+                    Grid.Row="6">
+            <TextBlock Margin="10"
+                       Text="Képzettség:" 
+                       Width="120" 
+                       VerticalAlignment="Center"
+                       Foreground="white"
+                       />
+            <TextBox Width="200" 
+                     HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" 
+                    Margin="0,10" 
+                    Grid.Row="7">
+            <TextBlock Margin="10"
+                       Text="Rövid leírás:" 
+                       Width="120" 
+                       VerticalAlignment="Center"
+                       Foreground="white"
+            />
+            <TextBlock Width="200" Background="white" Height="60">
+
+            </TextBlock>
+        </StackPanel>
+        <StackPanel>
+</StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="8" HorizontalAlignment="Center">
+            <Button Content="Módosítás" 
+                Width="150" 
+                Height="40" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center" 
+                Grid.Row="9"
+                    Margin="10"
+                    Background="#382d72"
+Foreground="#e5ccf4"/>
+
+            <Button Content="Mentés" 
+                Width="150" 
+                Height="40" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Grid.Row="9"
+                    Margin="10"
+                    Background="#382d72"
+Foreground="#e5ccf4"/>
+            
+            <Button Content="Törlés" 
+                Width="150" 
+                Height="40" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                Grid.Row="9" Click="Button_Click"
+                    Margin="10"
+                    Background="#382d72"
+Foreground="#e5ccf4"/>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

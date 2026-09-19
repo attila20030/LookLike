@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="LookLike.Desktop.Views.RegistrationPanel.RegistrationPanelView"             
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LookLike.Desktop.Views.RegistrationPanel" 
+             xmlns:viewmodels="clr-namespace:LookLike.Desktop.ViewModels" xmlns:registrationpanel="clr-namespace:LookLike.Desktop.ViewModels.RegistrationPanel"
+             d:DataContext="{d:DesignInstance Type=registrationpanel:RegistrationPanelViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" d:Background="#5c509c">
+    <Grid Margin="10">
+
+        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Foreground="White" FontSize="15" FontWeight="Bold" FontFamily="Times New Roman" HorizontalAlignment="Center">Admin Regisztráció</Label>
+        <Label Grid.Row="1" Grid.Column="0" Foreground="White" FontSize="15" FontFamily="Times New Roman">Név:</Label>
+        <Label Grid.Row="2" Grid.Column="0" Foreground="White" FontSize="15" FontFamily="Times New Roman">Felhasználónév:</Label>
+        <Label Grid.Row="3" Grid.Column="0" Foreground="White" FontSize="15" FontFamily="Times New Roman">Születési dátum:</Label>
+        <Label Grid.Row="4" Grid.Column="0" Foreground="White" FontSize="15" FontFamily="Times New Roman">E-mail:</Label>
+        <Label Grid.Row="5" Grid.Column="0" Foreground="White" FontSize="15" FontFamily="Times New Roman">Jelszó:</Label>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="7" Grid.ColumnSpan="2">
+            <Button Background="#382d72"
+Foreground="#e5ccf4" Margin="0 10 2 2" HorizontalAlignment="Center" MinWidth="80"
+                 Command="{Binding DoNewAdminCommand}"
+                    >Új</Button>
+
+            <Button Background="#382d72"
+Foreground="#e5ccf4" Margin="0 10 2 2" HorizontalAlignment="Center" MinWidth="80"
+                 Command="{Binding DoSaveCommand}"
+                 CommandParameter="{Binding SelectedAdmin}"
+                 >Mentés</Button>
+
+            <Button  Background="#382d72"
+Foreground="#e5ccf4" Margin="0 10 2 2" HorizontalAlignment="Center" MinWidth="80"
+                 Command="{Binding DoDeleteCommand}"
+                 CommandParameter="{Binding SelectedAdmin}"
+                 >Törlés</Button>
+
+        </StackPanel>
+
+        <TextBox Grid.Row="1" Width="150" HorizontalAlignment="Left" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedAdmin.Name}"></TextBox>
+        <TextBox Grid.Row="2" Width="150" HorizontalAlignment="Left" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedAdmin.Username}"></TextBox>
+        <DatePicker Grid.Row="3" Grid.Column="1" Width="150" HorizontalAlignment="Left" Margin="2 2 2 2"  SelectedDate="{Binding SelectedAdmin.BirthDay}"></DatePicker>
+        <TextBox Grid.Row="4" Width="150" HorizontalAlignment="Left" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedAdmin.Email}"></TextBox>
+        <TextBox Grid.Row="5" Width="150" HorizontalAlignment="Left" Grid.Column="1" Margin="2 2 2 2" Padding="0 2" Text="{Binding SelectedAdmin.Password}"></TextBox>
+
+        <ListBox Grid.Row="8"
+              Width="450"
+              Margin="15"
+              Height="190"
+              HorizontalAlignment="Center"
+              Grid.ColumnSpan="2" 
+              ItemsSource="{Binding Admins}"
+              SelectedItem="{Binding SelectedAdmin}" 
+      />
+    </Grid>
+</UserControl>
+

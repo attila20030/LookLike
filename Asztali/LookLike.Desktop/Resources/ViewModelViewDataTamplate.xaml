@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controlPanelViewModels="clr-namespace:LookLike.Desktop.ViewModels.ControlPanel"
+                    xmlns:controlPanelView="clr-namespace:LookLike.Desktop.Views.ControlPanel"
+                    xmlns:statPanelView="clr-namespace:LookLike.Desktop.Views.StatPanel"
+                    xmlns:statsPanelViewModels="clr-namespace:LookLike.Desktop.ViewModels.StatPanel"
+                    xmlns:registrationPanelView="clr-namespace:LookLike.Desktop.Views.RegistrationPanel"
+                    xmlns:registrationPanelViewModels="clr-namespace:LookLike.Desktop.ViewModels.RegistrationPanel"
+                    xmlns:notificationPanelView="clr-namespace:LookLike.Desktop.Views.NotificationPanel" 
+                    xmlns:notificationPanelViewModels="clr-namespace:LookLike.Desktop.ViewModels.NotificationPanel"
+                    xmlns:managmentPanelViewModels="clr-namespace:LookLike.Desktop.ViewModels.ManagmentPanel"
+                    xmlns:managmentPanelView="clr-namespace:LookLike.Desktop.Views.ManagmentPanel"					
+                    >
+    <DataTemplate DataType="{x:Type controlPanelViewModels:ControlPanelViewModel}">
+        <controlPanelView:ControlPanelView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type statsPanelViewModels:StatPanelViewModel}">
+        <statPanelView:StatPanelView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type registrationPanelViewModels:RegistrationPanelViewModel}">
+        <registrationPanelView:RegistrationPanelView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type notificationPanelViewModels:NotePanelViewModel}">
+        <!--Nem a megfelelő volt megadva ezért adott erorrt-->
+        <notificationPanelView:NotePanelView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type managmentPanelViewModels:ManagmentPanelViewModel}">
+        <managmentPanelView:AdminManagment/>
+    </DataTemplate>
+
+
+    <DataTemplate DataType="{x:Type managmentPanelViewModels:AdminCreateViewModel}">
+        <managmentPanelView:AdminCreate/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type managmentPanelViewModels:AdminDeleteViewModel}">
+        <managmentPanelView:AdminDelete/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type managmentPanelViewModels:AdminSeeViewModel}">
+        <managmentPanelView:AdminSee/>
+    </DataTemplate>
+    <!--Komment-->
+</ResourceDictionary>
